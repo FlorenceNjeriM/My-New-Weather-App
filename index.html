@@ -8,19 +8,20 @@
   </head>
   <body class="weather-app">
     <header>
-      <form>
+      <form id="search-form">
         <input
           type="search"
           placeholder="Enter a city..."
           required
-          class="search-button"
+          id="search-form-input"
+          class="search-form-input"
         />
         <input type="submit" value="Search" class="search-form-submit-button" />
       </form>
     </header>
     <main>
      
-      <h1 class="weather-app-city">Miami</h1>
+      <h1 class="weather-app-city" id="city">Miami</h1>
        
       <p >
         <div class="weather-app-data">
@@ -46,5 +47,6 @@
       This project was coded by <a href="https://github.com/FlorenceNjeriM" target="_blank">Florence Njeri</a>, is <a href="https://github.com/FlorenceNjeriM/My-New-Weather-App" target="_blank">open-sourced on Github</a> and
       <a href="https://main--mynewshecodesweatherapp.netlify.app/" target="_blank">hosted on Netlifly</a>.
     </footer>
+    <script src="src/index.js"></script>
   </body>
 </html>
