@@ -102,9 +102,10 @@ main {
   line-height: 50px;
 }
 .weather-forecast-icon {
-  font-size: 40px;
-  height: 65px;
+  width: 100px;
+  height: 100px;
   display: block;
+  margin: 0 auto;
 }
 .weather-forecast-temperature {
   color: #f65282;
