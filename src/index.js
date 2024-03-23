@@ -54,7 +54,13 @@ function handleSearchSubmit(event) {
   let searchInput = document.querySelector("#search-form-input");
   let cityElement = document.querySelector("#city");
   cityElement.innerHTML = searchInput.value;
+
   searchCity(searchInput.value);
+}
+function getForecast(city) {
+  let apiKey = "2c694e6242tb2c1do6178043fab30107";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}& units=metric`;
+  console.log(apiUrl);
 }
 
 function displayWeather() {
@@ -65,13 +71,13 @@ function displayWeather() {
     forecastHtml =
       forecastHtml +
       `
-  <div>
-    <div class="weather-forecast-date">${day}</div>
-    <div class="weather-forecast-icon">⛅</div>
-    <div class="weather-forecast-temperature">
-      <strong>13°</strong>
-      <span>8° </span>
-    </div>
+     <div class="weather-forecast" id="forecast">
+  <div class="weather-forecast-day">
+    <div class="weather-forecast-date">Wed</div>
+  <div class="weather-forecast-icon">⛅</div>
+  <div class="weather-forecast-temperature"><strong>18°</strong>
+    <span>16° </span></div>
+  </div>
   </div>
 `;
   });
@@ -84,4 +90,5 @@ let formElement = document.querySelector("#search-form");
 formElement.addEventListener("submit", handleSearchSubmit);
 
 searchCity("Paris");
+getForecast("Nairobi");
 displayWeather();
